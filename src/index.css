@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes multicolor {
+  0% {
+    color: #ff0080; /* Pink */
+    text-shadow: 0 0 2px #ff0080;
+  }
+  25% {
+    color: #ff8c00; /* Orange */
+    text-shadow: 0 0 2px #ff8c00;
+  }
+  50% {
+    color: #00ff00; /* Green */
+    text-shadow: 0 0 2px #00ff00;
+  }
+  75% {
+    color: #00bfff; /* Blue */
+    text-shadow: 0 0 2px #00bfff;
+  }
+  100% {
+    color: #ff0080; /* Reset to Pink */
+    text-shadow: 0 0 2px #ff0080;
+  }
+}
+
+.hover\:text-multicolor:hover {
+  animation: multicolor 2s infinite linear; /* Apply the multicolor animation */
+  transform: scale(1.1); /* Optional: Adds a scale effect on hover */
+}
+
+.highlightable::selection {
+  background-color: #FFB84D;; /* Highlight color */
+  color: black; /* Optional: text color for better contrast */
+}
